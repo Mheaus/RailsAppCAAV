@@ -1,0 +1,7 @@
+<?xml-stylesheet type="text/css" href="css/style.css"?>
+<svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
+  </defs>
+  <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
+</svg>
