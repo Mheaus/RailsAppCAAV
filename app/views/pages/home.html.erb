@@ -1,350 +1,352 @@
 <div class="frame" style="height: 200vh"></div>
-    <header>
-      <%=image_tag("background-header-min.jpg", class: "_background-header", alt: "header background image")%>
-      <nav class="menu">
-        <div class="navigation-button _framed">
-          <span>menu</span>
-          <%= image_tag("ic_expand_more.svg", alt: "expand icon") %>
-        </div>
-        <ul class="navigation-container -hidden">
-          <a data-turbolinks="false" onclick="youScroll.to('#annonces').start()" class="navigation-container__item -hidden">
-            <%= image_tag("menu_icon_1.png", alt: "menu icon") %>
-            <p>annonces</p>
-          </a>
-          <a data-turbolinks="false" onclick="youScroll.to('#droits').start()" class="navigation-container__item -hidden">
-            <p>droits</p>
-          </a>
-          <a data-turbolinks="false" onclick="youScroll.to('#partenaires').start()" class="navigation-container__item -hidden">
-            <%= image_tag("menu_icon_3.png", alt: "menu icon") %>
-            <p>partenaires</p>
-          </a>
-          <a data-turbolinks="false" onclick="youScroll.to('#contact').start()" class="navigation-container__item -hidden">
-            <%= image_tag("menu_icon_4.png", alt: "menu icon") %>
-            <p>contact</p>
-          </a>
-        </ul>
-      </nav>
-      <a data-turbolinks="false" onclick="youScroll.to('#contact').start()" href="#submit-annonce" class="__button-submit-top -fadeUp">
-        <p class="_text">déposer<br>une annonce</p>
-        <p class="_text -display-hover">cliquez ici</p>
-        <div class="_background-white"></div>
-        <div class="_background-black"></div>
-      </a>
-      <h1 class="-fadeUp">Le meilleur<br>endroit pour <a data-turbolinks="false" onclick="youScroll.to('#__annonces-search').start()" href="#annonces">acquérir</a><br>un <a data-turbolinks="false" onclick="youScroll.to('#__annonces-search').start()" href="#annonces">commerce ambulant</a></h1>
-      <div class="life-selling _framed">
-        <p>Vous souhaitez acquérir un commerce ambulant ?</p>
-        <hr>
-        <p>La vie de commerçant vous intéresse ?</p>
-      </div>
-      <div class="life-selling _framed">
-        <p>Nous sommes spécialisés dans la transmission de savoir faire entre commerçants et re-preneurs</p>
-      </div>
-      <p class="catchphrase m-only _bold">Nous accompagnons des re-preneurs dans leur projet d’acquisition de commerces</p>
-      <a data-turbolinks="false" onclick="youScroll.to('#__annonces-search').start()" href="#annonces" class="discover -fadeUp">
+<header id="home-header">
+  <%=image_tag("background-header-min.jpg", class: "_background-header", alt: "header background image")%>
+  <nav class="menu">
+    <div class="navigation-button _framed">
+      <span>menu</span>
+      <%= image_tag("ic_expand_more.svg", alt: "expand icon") %>
+    </div>
+    <ul class="navigation-container -hidden">
+      <a data-turbolinks="false" onclick="youScroll.to('#annonces').start()" class="navigation-container__item -hidden">
+        <%= image_tag("menu_icon_1.png", alt: "menu icon") %>
         <p>annonces</p>
-        <%= image_tag("discover-arrow.svg", alt: "icon discover arrow down", class: "sm-grey-only") %>
-        <%= image_tag("discover-arrow-white.svg", alt: "icon discover arrow down", class: "no-sm-white") %>
       </a>
-    </header>
-    <section id="__annonces-search">
-      <h2>
-        <p>Vous souhaitez acquérir un commerce ambulant ?</p>
-        <p>Recherchez parmis toutes sortes d’annonces à travers toute la France.</p>
-      </h2>
-      <form class="__search-input">
-        <input type="search" class="_input" placeholder="« Essayez Bordeaux »">
-        <a href="#annonces_all" class="_button-search">
-          <i class="fa fa-search"></i>
-        </a>
-      </form>
-    </section>
-    <section id="annonces">
-      <p class="_section-title">dernières annonces</p>
-      <a href="#annonces_all" class="_tiny">afficher ></a>
-      <div class="__container-nav-annonce-items">
-        <div class="_button-more _left _off">
-          <svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-              <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
-            </defs>
-            <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
-          </svg>
+      <a data-turbolinks="false" onclick="youScroll.to('#droits').start()" class="navigation-container__item -hidden">
+        <p>droits</p>
+      </a>
+      <a data-turbolinks="false" onclick="youScroll.to('#partenaires').start()" class="navigation-container__item -hidden">
+        <%= image_tag("menu_icon_3.png", alt: "menu icon") %>
+        <p>partenaires</p>
+      </a>
+      <a data-turbolinks="false" onclick="youScroll.to('#contact').start()" class="navigation-container__item -hidden">
+        <%= image_tag("menu_icon_4.png", alt: "menu icon") %>
+        <p>contact</p>
+      </a>
+    </ul>
+  </nav>
+  <a data-turbolinks="false" onclick="youScroll.to('#contact').start()" href="#submit-annonce" class="__button-submit-top -fadeUp">
+    <p class="_text">déposer<br>une annonce</p>
+    <p class="_text -display-hover">cliquez ici</p>
+    <div class="_background-white"></div>
+    <div class="_background-black"></div>
+  </a>
+  <h1 class="-fadeUp">Le meilleur<br>endroit pour <a data-turbolinks="false" onclick="youScroll.to('#__annonces-search').start()" href="#annonces">acquérir</a><br>un <a data-turbolinks="false" onclick="youScroll.to('#__annonces-search').start()" href="#annonces">commerce ambulant</a></h1>
+  <div class="life-selling _framed">
+    <p>Vous souhaitez acquérir un commerce ambulant ?</p>
+    <hr>
+    <p>La vie de commerçant vous intéresse ?</p>
+  </div>
+  <div class="life-selling _framed">
+    <p>Nous sommes spécialisés dans la transmission de savoir faire entre commerçants et re-preneurs</p>
+  </div>
+  <p class="catchphrase m-only _bold">Nous accompagnons des re-preneurs dans leur projet d’acquisition de commerces</p>
+  <a data-turbolinks="false" onclick="youScroll.to('#__annonces-search').start()" href="#annonces" class="discover -fadeUp">
+    <p>annonces</p>
+    <%= image_tag("discover-arrow.svg", alt: "icon discover arrow down", class: "sm-grey-only") %>
+    <%= image_tag("discover-arrow-white.svg", alt: "icon discover arrow down", class: "no-sm-white") %>
+  </a>
+</header>
+<section id="__annonces-search">
+  <h2>
+    <p>Vous souhaitez acquérir un commerce ambulant ?</p>
+    <p>Recherchez parmis toutes sortes d’annonces à travers toute la France.</p>
+  </h2>
+  <%= form_tag announces_path, method: :get, class: "__search-input" do %>
+    <input type="search" class="_input" placeholder="« Essayez Bordeaux »">
+    <%= link_to announces_path, class: "_button-search" do %>
+    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+    <% end %>
+  <% end %>
+</section>
+<section id="annonces">
+  <p class="_section-title">dernières annonces</p>
+  <a href="#annonces_all" class="_tiny">afficher ></a>
+  <div class="__container-nav-annonce-items">
+    <div class="_button-more _left _off">
+      <svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
+        </defs>
+        <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
+      </svg>
+    </div>
+    <div id="annonces-container">
+      <a class="annonce-item" id="annonce-item1">
+        <%= image_tag("placeholder1.png", alt: "photo annonce 1") %>
+        <div class="__info-container">
+          <span class="__location">Mérignac, 33</span>
+          <span class="__title">Stand de Fruits </span>
+          <p>8m de Stand tout equipé - Vente de fruits et légumes - pour couple - rak aluminium</p>
         </div>
-        <div id="annonces-container">
-          <a class="annonce-item" id="annonce-item1">
-            <%= image_tag("placeholder1.png", alt: "photo annonce 1") %>
-            <div class="__info-container">
-              <span class="__location">Mérignac, 33</span>
-              <span class="__title">Stand de Fruits </span>
-              <p>8m de Stand tout equipé - Vente de fruits et légumes - pour couple - rak aluminium</p>
-            </div>
-          </a>
-          <a class="annonce-item" id="annonce-item2">
-            <%= image_tag("placeholder2.png", alt: "photo annonce 2") %>
-            <div class="__info-container">
-              <span class="__location">Bordeaux, 33</span>
-              <span class="__title">Title</span>
-              <p>Vente de Café - Thé- Chocolat - Café en Grain , moulu , dosette - Stand entièrement equipé: Parasol,table...</p>
-            </div>
-          </a>
-          <a class="annonce-item" id="annonce-item3">
-            <%= image_tag("placeholder3.png", alt: "photo annonce 3") %>
-            <div class="__info-container">
-              <span class="__location">Vendays M.., 33</span>
-              <span class="__title">Title</span>
-              <p>Sur Vendays Montalivet - Vente d'olives et condiments et fruits secs - Stand en dur ouvert 6jrs /7jrs</p>
-            </div>
-          </a>
+      </a>
+      <a class="annonce-item" id="annonce-item2">
+        <%= image_tag("placeholder2.png", alt: "photo annonce 2") %>
+        <div class="__info-container">
+          <span class="__location">Bordeaux, 33</span>
+          <span class="__title">Title</span>
+          <p>Vente de Café - Thé- Chocolat - Café en Grain , moulu , dosette - Stand entièrement equipé: Parasol,table...</p>
         </div>
-        <div class="_button-more _right">
-          <svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-            <defs>
-              <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
-            </defs>
-            <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
-          </svg>
+      </a>
+      <a class="annonce-item" id="annonce-item3">
+        <%= image_tag("placeholder3.png", alt: "photo annonce 3") %>
+        <div class="__info-container">
+          <span class="__location">Vendays M.., 33</span>
+          <span class="__title">Title</span>
+          <p>Sur Vendays Montalivet - Vente d'olives et condiments et fruits secs - Stand en dur ouvert 6jrs /7jrs</p>
+        </div>
+      </a>
+    </div>
+    <div class="_button-more _right">
+      <svg width="13" height="19" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+          <path id="a" d="M2.174.447L9.25 7.413 16.326.447 18.5 2.59l-9.25 9.127L0 2.591z"/>
+        </defs>
+        <use stroke="#979797" xlink:href="#a" transform="rotate(90 6.259 6.259)"  fill-rule="evenodd"/>
+      </svg>
+    </div>
+  </div>
+  <a href="#">Tout afficher (plus de 100) ></a>
+</section>
+<section id="contact">
+  <div class="__main-input-infos">
+    <div class="__header">
+      <p class="_section-title">Contact</p>
+      <div class="__select-form">
+      <div class="_button-submit -add _framed -hidden-md">
+        <span>Déposer une annonce</span>
+      </div>
+      <div class="_button-submit -show _framed -hidden-md">
+        <span>Demander des informations</span>
+      </div>
+      <i class="fa fa-caret-down"></i>
+    </div>
+    </div>
+    <div class="__contact-inputs">
+      <div class="contact-input __add">
+        <div class="contact-input__button _framed" data-type="add">
+          <span>Vous voulez déposer une annonce ?</span>
+          <%= image_tag("ic_expand_more.svg", alt: "icon expand more") %>
+        </div>
+        <form class="__form-add-annonce" action="annonces#add">
+          <div class="__row _name-group">
+            <div class="__input-group">
+              <label class="_name-add" for="firstname-add">Prénom</label>
+              <input type="text" name="firstname" id="firstname-add" required placeholder="Prénom">
+            </div>
+            <div class="__input-group">
+              <label class="_name-add" for="lastname-add">Nom</label>
+              <input type="text" name="lastname" id="lastname-add" required placeholder="Nom">
+            </div>
+            <div class="__input-group _phone-add">
+              <label for="phone-number-add">Téléphone</label>
+              <input type="text" name="phone" id="phone-add" required>
+            </div>
+          </div>
+          <div class="__row _title-mail">
+            <div class="__input-group">
+              <label for="title-add">Titre de l'Annonce</label>
+              <input type="text" name="Titre" id="title-add" required placeholder="titre de votre annonce">
+            </div>
+            <div class="__input-group _mail-add">
+              <label for="mail-add">Votre Email</label>
+              <input type="email" name="Titre" id="mail-add" required placeholder="email@email.com">
+            </div>
+          </div>
+          <div class="__row _description-file_uploads">
+            <div class="__input-group">
+              <label for="description-add">Contenu - Description</label>
+              <textarea name="description" rows="8" required cols="80" id="description-add" placeholder="description de votre annonce" style="resize: none"></textarea>
+            </div>
+            <div class="__input-group _file-upload">
+              <div class="__plus-background">
+                <i class="fa fa-plus"></i>
+              </div>
+              <label for="image_uploads-add">Ajouter une Image<br>(max 3)</label>
+              <input type="file" accept=".jpeg, .png, .jpg" name="image_uploads-add" id="image_uploads-add">
+            </div>
+          </div>
+          <div class="__row">
+            <div class="__preview-image_uploads">
+              <div class="_preview-item -empty">
+                <img src="" alt="">
+                <p></p>
+                <i class="fa fa-times-circle"></i>
+              </div>
+              <div class="_preview-item -empty">
+                <img src="" alt="">
+                <p></p>
+                <i class="fa fa-times-circle"></i>
+              </div>
+              <div class="_preview-item -empty">
+                <img src="" alt="">
+                <p></p>
+                <i class="fa fa-times-circle"></i>
+              </div>
+            </div>
+            <input class="_button-submit-add" type="submit" name="submit-annonce-add" value="create new annonce">
+          </div>
+        </form>
+      </div>
+      <div class="contact-input __show -hidden-lg">
+        <div class="contact-input__button _framed" data-type="show">
+          <span>Vous êtes intéressé par une annonce ?</span>
+          <%= image_tag("ic_expand_more.svg", alt: "icon expand more") %>
         </div>
       </div>
-      <a href="#">Tout afficher (plus de 100) ></a>
-    </section>
-    <section id="contact">
-      <div class="__main-input-infos">
-        <div class="__header">
-          <p class="_section-title">Contact</p>
-          <div class="__select-form">
-          <div class="_button-submit -add _framed -hidden-md">
-            <span>Déposer une annonce</span>
-          </div>
-          <div class="_button-submit -show _framed -hidden-md">
-            <span>Demander des informations</span>
-          </div>
-          <i class="fa fa-caret-down"></i>
-        </div>
-        </div>
-        <div class="__contact-inputs">
-          <div class="contact-input __add">
-            <div class="contact-input__button _framed" data-type="add">
-              <span>Vous voulez déposer une annonce ?</span>
-              <%= image_tag("ic_expand_more.svg", alt: "icon expand more") %>
-            </div>
-            <form class="__form-add-annonce" action="annonces#add">
-              <div class="__row _name-group">
-                <div class="__input-group">
-                  <label class="_name-add" for="firstname-add">Prénom</label>
-                  <input type="text" name="firstname" id="firstname-add" required placeholder="Prénom">
-                </div>
-                <div class="__input-group">
-                  <label class="_name-add" for="lastname-add">Nom</label>
-                  <input type="text" name="lastname" id="lastname-add" required placeholder="Nom">
-                </div>
-                <div class="__input-group _phone-add">
-                  <label for="phone-number-add">Téléphone</label>
-                  <input type="text" name="phone" id="phone-add" required>
-                </div>
-              </div>
-              <div class="__row _title-mail">
-                <div class="__input-group">
-                  <label for="title-add">Titre de l'Annonce</label>
-                  <input type="text" name="Titre" id="title-add" required placeholder="titre de votre annonce">
-                </div>
-                <div class="__input-group _mail-add">
-                  <label for="mail-add">Votre Email</label>
-                  <input type="email" name="Titre" id="mail-add" required placeholder="email@email.com">
-                </div>
-              </div>
-              <div class="__row _description-file_uploads">
-                <div class="__input-group">
-                  <label for="description-add">Contenu - Description</label>
-                  <textarea name="description" rows="8" required cols="80" id="description-add" placeholder="description de votre annonce" style="resize: none"></textarea>
-                </div>
-                <div class="__input-group _file-upload">
-                  <div class="__plus-background">
-                    <i class="fa fa-plus"></i>
-                  </div>
-                  <label for="image_uploads-add">Ajouter une Image<br>(max 3)</label>
-                  <input type="file" accept=".jpeg, .png, .jpg" name="image_uploads-add" id="image_uploads-add">
-                </div>
-              </div>
-              <div class="__row">
-                <div class="__preview-image_uploads">
-                  <div class="_preview-item -empty">
-                    <img src="" alt="">
-                    <p></p>
-                    <i class="fa fa-times-circle"></i>
-                  </div>
-                  <div class="_preview-item -empty">
-                    <img src="" alt="">
-                    <p></p>
-                    <i class="fa fa-times-circle"></i>
-                  </div>
-                  <div class="_preview-item -empty">
-                    <img src="" alt="">
-                    <p></p>
-                    <i class="fa fa-times-circle"></i>
-                  </div>
-                </div>
-                <input class="_button-submit-add" type="submit" name="submit-annonce-add" value="create new annonce">
-              </div>
-            </form>
-          </div>
-          <div class="contact-input __show -hidden-lg">
-          <div class="contact-input__button _framed" data-type="show">
-            <span>Vous êtes intéressé par une annonce ?</span>
-            <%= image_tag("ic_expand_more.svg", alt: "icon expand more") %>
-          </div>
-        </div>
-        </div>
-        <div class="__links">
-          <div class="__col">
-            <a href="mailto:info@commerce-ambulant-à-vendre.com" class="_mail">info@commerce-ambulant-à-vendre.com</a>
-            <a href="tel:+33678985647" class="_phone">0678985647</a>
-          </div>
-          <a href="" class="_adress">adress, adress</br>00000, address</a>
-        </div>
-        <a href="#facebook" class="_facebook">
-          <i class="fab fa-facebook"></i>
-          <span>Rejoignez-nous sur facebook</span>
-        </a>
+    </div>
+    <div class="__links">
+      <div class="__col">
+        <a href="mailto:info@commerce-ambulant-à-vendre.com" class="_mail">info@commerce-ambulant-à-vendre.com</a>
+        <a href="tel:+33678985647" class="_phone">0678985647</a>
       </div>
-      <div class="__droits-partenaires">
-        <div id="droits">
-          <%= image_tag("rightsbackground-min.png", alt: "_background") %>
-          <div class="_content">
-            <p>Nous accompagnons des re-preneurs dans leur projet d’acquisition de commerces.Nous préparons et instruisons officiellement les dossiers avec les mairies, les banques et les institutions.</p>
-            <a href="#droits" class="_button _framed">
-              <i class="fa fa-gavel"></i>
-              <span>Vos droits et Obligations ></span>
-            </a>
-          </div>
-        </div>
-        <div id="__partenaires">
-          <p class="_section-title">Nos Partenaires</p>
-          <!-- <p class="_name">
-            mairies des villes de gironde
-          </p>
-          <p class="_name">
-            Syndicat des commerçants ambulant de France
-          </p>
-          <p class="_name">
-            Cabinet d'avocat bordelais en droit des affaires spécialisé
-          </p> -->
-        </div>
-      </div>
-    </section>
-
-    <a data-turbolinks="false" onclick="youScroll.to('#top').start()" class="button-to-top _framed -hidden">
-      <%= image_tag("ic_expand_more.svg") %>
+      <a href="" class="_adress">adress, adress</br>00000, address</a>
+    </div>
+    <a href="#facebook" class="_facebook">
+      <i class="fab fa-facebook"></i>
+      <span>Rejoignez-nous sur facebook</span>
     </a>
+  </div>
+  <div class="__droits-partenaires">
+    <div id="droits">
+      <%= image_tag("rightsbackground-min.png", class: "_background") %>
+      <div class="_content">
+        <p>Nous accompagnons des re-preneurs dans leur projet d’acquisition de commerces.Nous préparons et instruisons officiellement les dossiers avec les mairies, les banques et les institutions.</p>
+        <a href="#droits" class="_button _framed">
+          <i class="fa fa-gavel"></i>
+          <span>Vos droits et Obligations ></span>
+        </a>
+      </div>
+    </div>
+    <div id="__partenaires">
+      <div class="__header">
+        <p class="_section-title">Nos Partenaires</p>
+        <%= image_tag("ic_expand_more.svg") %>
+      </div>
+      <!-- <p class="_name">
+        mairies des villes de gironde
+      </p>
+      <p class="_name">
+        Syndicat des commerçants ambulant de France
+      </p>
+      <p class="_name">
+        Cabinet d'avocat bordelais en droit des affaires spécialisé
+      </p> -->
+    </div>
+  </div>
+</section>
+<a data-turbolinks="false" onclick="youScroll.to('#top').start()" class="button-to-top _framed -hidden">
+  <%= image_tag("ic_expand_more.svg") %>
+</a>
+<a href="http://github.com/mheaus" class="signature">adbrtweb</a>
 
-    <a href="http://github.com/mheaus" class="signature">adbrtweb</a>
+<%= content_for :after_js do %>
+  <script type="text/javascript">
+  const headerBackground = document.querySelector("._background-header");
 
-    <script type="text/javascript">
-      const headerBackground = document.querySelector("._background-header");
+  function displayHeaderBackground() {
+    headerBackground.classList.add("-fadeUp");
+  }
+  headerBackground.addEventListener("onload", displayHeaderBackground());
 
-      function displayHeaderBackground() {
-        headerBackground.classList.add("-fadeUp");
-      }
-      headerBackground.addEventListener("onload", displayHeaderBackground());
+  const menuButton = document.querySelector('.navigation-button');
+  const menuContainer = document.querySelector('.navigation-container')
+  const menuItems = document.querySelectorAll('.navigation-container__item');
 
-      const menuButton = document.querySelector('.navigation-button');
-      const menuContainer = document.querySelector('.navigation-container')
-      const menuItems = document.querySelectorAll('.navigation-container__item');
+  function displayMenu(e) {
+    this.classList.toggle('active')
+    if (menuContainer.classList.contains('-hidden')) {
+      menuContainer.classList.toggle('-hidden');
+      window.setTimeout(function(){
+        menuItems.forEach(item => item.classList.toggle('-hidden'))
+      }, 500)
+    } else {
+      menuItems.forEach(item => item.classList.toggle('-hidden'));
+      window.setTimeout(function(){
+        menuContainer.classList.toggle('-hidden');
+      }, 500)
+    }
+  }
+  menuButton.addEventListener('click', displayMenu)
 
-      function displayMenu(e) {
-        this.classList.toggle('active')
-        if (menuContainer.classList.contains('-hidden')) {
-          menuContainer.classList.toggle('-hidden');
-          window.setTimeout(function(){
-            menuItems.forEach(item => item.classList.toggle('-hidden'))
-          }, 500)
-        } else {
-          menuItems.forEach(item => item.classList.toggle('-hidden'));
-          window.setTimeout(function(){
-            menuContainer.classList.toggle('-hidden');
-          }, 500)
-        }
-      }
-      menuButton.addEventListener('click', displayMenu)
+  // hide and show go-to-top button
 
-      // hide and show go-to-top button
+  function isInViewport(element) {
+    var rect = element.getBoundingClientRect();
+    var html = document.documentElement;
+    return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || html.clientHeight) &&
+      rect.right <= (window.innerWidth || html.clientWidth)
+    );
+  }
+  const annoncesScrollButton = document.querySelector('.discover');
+  const buttonToTop = document.querySelector('.button-to-top');
 
-      function isInViewport(element) {
-        var rect = element.getBoundingClientRect();
-        var html = document.documentElement;
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || html.clientHeight) &&
-          rect.right <= (window.innerWidth || html.clientWidth)
-        );
-      }
-      const annoncesScrollButton = document.querySelector('.discover');
-      const buttonToTop = document.querySelector('.button-to-top');
+  // set fixed height for the frame
 
-      // set fixed height for the frame
-
-      const body = document.body,
-      html = document.documentElement;
-      const frame = document.querySelector('.frame');
-
-
-      // set fixed height for input buttons
-      const contactInputAdd = document.querySelector('.contact-input.__add');
-      const contactInputShow = document.querySelector('.contact-input.__show');
-      const inputButtons = document.querySelectorAll('.contact-input>.contact-input__button');
-
-      function expandInput() {
-        const type =  this.dataset.type;
-        if (type === "add") {
-          contactInputAdd.classList.toggle('-expand');
-          contactInputShow.classList.remove('-expand');
-        } else {
-          contactInputShow.classList.toggle('-expand');
-          contactInputAdd.classList.remove('-expand');
-        }
-      };
-
-      inputButtons.forEach(button =>  button.addEventListener('click', expandInput));
+  const body = document.body,
+  html = document.documentElement;
+  const frame = document.querySelector('.frame');
 
 
-      function frameHeight() {
-        let height = Math.max(
-          body.scrollHeight,
-          body.offsetHeight,
-          html.clientHeight,
-          html.scrollHeight,
-          html.offsetHeight
-        );
-        frame.style.height=`${height}px`;
-      };
+  // set fixed height for input buttons
+  const contactInputAdd = document.querySelector('.contact-input.__add');
+  const contactInputShow = document.querySelector('.contact-input.__show');
+  const inputButtons = document.querySelectorAll('.contact-input>.contact-input__button');
 
-      const h1 = document.querySelector("h1");
+  function expandInput() {
+    const type =  this.dataset.type;
+    if (type === "add") {
+      contactInputAdd.classList.toggle('-expand');
+      contactInputShow.classList.remove('-expand');
+    } else {
+      contactInputShow.classList.toggle('-expand');
+      contactInputAdd.classList.remove('-expand');
+    }
+  };
 
-      function displayButtonToTop() {
-        if (isInViewport(annoncesScrollButton)) {
-          buttonToTop.classList.add('-hidden');
-        } else {
-          buttonToTop.classList.remove('-hidden');
-        }
-      };
+  inputButtons.forEach(button =>  button.addEventListener('click', expandInput));
 
-      window.onscroll = function(e) {
-        frameHeight();
-        displayButtonToTop();
-      };
 
-      const buttonsMore = document.querySelectorAll(".__button-more");
-      const annoncesContainer = document .querySelector("#annonces-container");
+  function frameHeight() {
+    let height = Math.max(
+      body.scrollHeight,
+      body.offsetHeight,
+      html.clientHeight,
+      html.scrollHeight,
+      html.offsetHeight
+    );
+    frame.style.height=`${height}px`;
+  };
 
-      function slideAnnonceContainer() {
-        if (this.classList.contains("_right")) {
+  const h1 = document.querySelector("h1");
 
-        }
-      }
+  function displayButtonToTop() {
+    if (isInViewport(annoncesScrollButton)) {
+      buttonToTop.classList.add('-hidden');
+    } else {
+      buttonToTop.classList.remove('-hidden');
+    }
+  };
 
-      buttonsMore.forEach(button => button.addEventListener("click", slideAnnonceContainer));
+  window.onscroll = function(e) {
+    frameHeight();
+    displayButtonToTop();
+  };
 
-      // when .__button-more.onclick if .annonce-item:first-of-type isInViewport buttonMoreLeft.classList.toggle('_off')
-      // when .__button-more.onclick if .annonce-item:last-of-type isInViewport buttonMoreRight.classList.toggle('_off')
-    </script>
-    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
+  const buttonsMore = document.querySelectorAll(".__button-more");
+  const annoncesContainer = document .querySelector("#annonces-container");
+
+  function slideAnnonceContainer() {
+    if (this.classList.contains("_right")) {
+
+    }
+  }
+
+  buttonsMore.forEach(button => button.addEventListener("click", slideAnnonceContainer));
+
+  // when .__button-more.onclick if .annonce-item:first-of-type isInViewport buttonMoreLeft.classList.toggle('_off')
+  // when .__button-more.onclick if .annonce-item:last-of-type isInViewport buttonMoreRight.classList.toggle('_off')
+</script>
+<% end %>

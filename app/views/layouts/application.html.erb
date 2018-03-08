@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Commerce Ambulant à Vendre</title>
-    <link rel="icon" href="image/favicon.ico">
+    <link rel="icon" href=<%= image_path "favicon.ico"%>>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet">
     <%= csrf_meta_tags %>
 
@@ -15,5 +15,7 @@
 
   <body id="top">
     <%= yield %>
+    <%= yield :after_js %>
+    <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
   </body>
 </html>

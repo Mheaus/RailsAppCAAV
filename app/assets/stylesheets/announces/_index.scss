@@ -1,0 +1,43 @@
+// Place all the styles related to the announces controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+header#index-header {
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: .25rem 1rem;
+  img._logo {
+    width: 3.5rem;
+  	height: 3.5rem;
+  	margin: .75rem .5rem .25rem;
+  }
+  .__search-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    height: 100%;
+    width: 24rem;
+    margin: .5rem 1rem;
+    padding: .75rem 1.25rem;
+    border-radius: 0.2rem;
+    border: .063rem solid lightgrey;
+    box-shadow: 0.25px 0.3rem 0.5rem #9ca0ab2e;
+    ._input {
+      display: block;
+      font-size: 1rem;
+      border: none;
+      height: 100%;
+      min-width: 75%;
+      opacity: .65;
+      &:focus {
+        outline: none;
+      }
+    }
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      opacity: .75;
+    }
+  }
+}

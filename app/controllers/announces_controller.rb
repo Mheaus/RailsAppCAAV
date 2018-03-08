@@ -1,8 +1,10 @@
 class AnnouncesController < ApplicationController
   def index
+    @announces = Announce.all
   end
 
   def new
+    @announce = Announce.new
   end
 
   def create
