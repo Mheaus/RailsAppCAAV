@@ -16,6 +16,7 @@
   <body id="top">
     <%= yield %>
     <%= yield :after_js %>
+    <%= javascript_pack_tag 'application' %>
     <script src="http://localhost:35729/livereload.js" charset="utf-8"></script>
   </body>
 </html>
