@@ -28,7 +28,7 @@ class App extends Component {
     this.setState({
       search: event.target.value,
       announces: this.state.allAnnounces.filter(announce =>
-        new RegExp(event.target.value, 'i').exec(announce.name)
+        new RegExp(event.target.value, 'i').exec(announce.title)
       )
     });
   };
@@ -47,6 +47,9 @@ class App extends Component {
     return (
       <div>
         <header id="index-header">
+          <a href="/">
+            <img src="/assets/favicon.ico" alt="logo link home" className="_logo"/>
+          </a>
           <div className="__search-input">
             <input type="search" className="_input" placeholder="« Essayez Bordeaux »" value={this.state.search}
             onChange={this.handleSearch}></input>

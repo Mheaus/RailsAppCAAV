@@ -18,7 +18,7 @@ class Announce extends React.Component {
   }
 
   handleClick = () => {
-    // this.props.selectAnnounce(this.props.announce);
+    this.props.selectAnnounce(this.props.announce);
   }
 }
 
