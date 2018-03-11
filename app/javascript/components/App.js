@@ -70,7 +70,7 @@ class App extends Component {
               );
             })}
           </div>
-          <div className="map">
+          <div className="_map">
             <GoogleMapReact
               bootstrapURLKeys={{
                 key: 'AIzaSyBeqtEur5dcqenuIuMjrfAoY2r39SqH_V4'

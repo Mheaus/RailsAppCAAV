@@ -42,6 +42,8 @@ header#index-header {
   }
 }
 section#__main-index {
+  display: flex;
+  height: 100%;
   .__announces-index {
     // ._announce-item {
     //   img {}
@@ -113,5 +115,8 @@ section#__main-index {
         }
       }
     }
+  }
+  ._map {
+    flex-grow: 1;
   }
 }
