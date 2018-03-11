@@ -12,13 +12,7 @@
 <nav>
 
 </nav>
-<section class="__announces">
-  <%= @announces.each do |member| %>
-    <%= member %>
-  <% end %>
-
-  <%= react_component("Index", { greeting: "Hello" }) %>
-
-  <%= params %>
+<section id="__main-index">
 
 </section>
+<%= react_component('App', { announces: @announces } ) %>
