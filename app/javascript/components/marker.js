@@ -1,5 +1,4 @@
 import React from "react";
-import './marker.css';
 
 class Marker extends React.Component {
   render() {
@@ -7,7 +6,7 @@ class Marker extends React.Component {
     if (this.props.selected) {
       classes += " selected";
     }
-    return <div className={classes}>ah</div>;
+    return <div className={classes}>{this.props.text}</div>;
   }
 }
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 
 import Announce from './announce';
+import GMap from './GMap';
 import Marker from './marker';
 
 class App extends Component {
@@ -70,25 +71,17 @@ class App extends Component {
               );
             })}
           </div>
-          <div className="_map">
-            <GoogleMapReact
-              bootstrapURLKeys={{
-                key: 'AIzaSyBeqtEur5dcqenuIuMjrfAoY2r39SqH_V4'
-              }}
-              center={center}
-              zoom={14}
-            >
-              {this.state.announces.map(announce => {
-                return (
-                  <Marker
-                    key={announce.title}
-                    {...announce}
-                    selected={announce === this.state.selectedAnnounce}
-                  />
-                );
-              })}
-            </GoogleMapReact>
-          </div>
+          <GMap>
+            {this.state.announces.map(announce => {
+              return (
+                <Marker
+                  key={announce.title}
+                  {...announce}
+                  selected={announce === this.state.selectedAnnounce}
+                />
+              );
+            })}
+          </GMap>
         </section>
       </div>
     );

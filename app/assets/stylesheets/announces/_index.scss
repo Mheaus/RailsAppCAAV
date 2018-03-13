@@ -118,5 +118,20 @@ section#__main-index {
   }
   ._map {
     flex-grow: 1;
+    height: 10rem;
+  }
+  .marker {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+    width: 36px;
+    text-align: center;
+    font-size: 15px;
+    .selected {
+      background-color: lightyellow;
+      border-color: black;
+      font-weight: bold;
+    }
   }
 }
