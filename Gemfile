@@ -33,8 +33,12 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# React
 gem 'webpacker'
 gem 'react-rails'
+# pckg for google maps : "google-map-react" with yarn
+
+gem 'geocoder'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

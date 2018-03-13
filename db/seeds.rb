@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Announce.destroy_all
+
+if Announce.all.length == 0
+  puts "database empty"
+else
+  puts "error when trying to destroy db"
+end
+
+announces = [
+  {title: "Stand de Fruits", description: "8m de Stand tout equipé - Vente de fruits et légumes - pour couple - rak aluminium", address: "Mérignac, 33"},
+  {title: "Café - Chocolat", description: "Vente de Café - Thé- Chocolat - Café en Grain , moulu , dosette - Stand entièrement equipé: Parasol,table...", address: "Bordeaux, 33"},
+  {title: "Olives et Condiments", description: "Sur Vendays Montalivet - Vente d'olives et condiments et fruits secs - Stand en dur ouvert 6jrs /7jrs", address: "Vendays Montalivet"}
+]
+
+announces.each do |announce|
+  Announce.create!(announce)
+end
+
+puts "successfully created #{Announce.all.length} announces"
