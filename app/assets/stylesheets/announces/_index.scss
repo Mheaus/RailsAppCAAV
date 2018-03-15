@@ -11,12 +11,16 @@ header#index-header {
   display: flex;
   align-items: center;
   padding: .25rem 1rem;
-  img._logo {
-    width: 3.5rem;
-  	height: 3.5rem;
-  	margin: .75rem .5rem .25rem;
-  }
-  .__search-input {
+  justify-content: space-between;
+  .__main-header {
+    display: flex;
+    align-items: center;
+    img._logo {
+      width: 3.5rem;
+      height: 3.5rem;
+      margin: .75rem .5rem .25rem;
+    }
+    .__search-input {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -45,6 +49,21 @@ header#index-header {
       opacity: .75;
     }
   }
+  }
+  .__authentication {
+    display: flex;
+    a {
+      font-size: .9rem;
+      color: #868686;
+      margin: 0 .5rem;
+      &._sign-in {
+
+      }
+      &._log-in {
+
+      }
+    }
+  }
 }
 section#__main-index {
   display: flex;
@@ -61,15 +80,18 @@ section#__main-index {
     flex-wrap: wrap;
     height: 100%;
     width: 100%;
+    padding: 1rem;
+    justify-content: space-between;
     ._announce-item {
       display: flex;
       flex: 1;
       flex-direction: column;
-      min-width: 20rem;
-      height: 16rem;
-      margin: .25rem 1rem;
+      max-width: 32.25%;
       box-shadow: .015em .06em .5em .13em rgba(120, 119, 119, 0.3);
-      img {}
+      img {
+        width: 100%;
+
+      }
       .__info-container {
         display: flex;
         height: 100%;
@@ -102,9 +124,9 @@ section#__main-index {
       ._announce-item {
         margin-top: 1rem;
         flex: 1;
-        img {
+        ._announce-picture {
           width: auto;
-          height: 100.5%;
+          height: 1rem;
           margin-right: -1px;
           max-height: 9rem;
         }
@@ -129,16 +151,26 @@ section#__main-index {
     width: 40%;
     height: calc(100vh - 5.25rem);
     opacity: 1;
+    .gm-fullscreen-control {
+      display: none;
+    }
   }
   .marker {
-    border: 1px solid #ccc;
-    padding: .5rem 1rem;
-    background-color: white;
     text-align: center;
+    img {
+      margin: .25rem;
+      height: 2.5rem;
+      width: auto;
+      max-width: 6rem;
+      outline: .25rem solid white;
+      box-shadow: .015em .06em .5em .13em rgba(120, 119, 119, 0.3);
+      transition: all 1s;
+    }
     &.selected {
-      background-color: lightblue;
-      border-color: black;
-      font-weight: bold;
+      img {
+        outline: .25rem solid black;
+        box-shadow: .03em .1em .5em .13em rgba(120, 119, 119, 0.3);
+      }
     }
   }
 }

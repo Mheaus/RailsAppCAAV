@@ -1,6 +1,9 @@
 import React from "react";
+import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
+import Announce from './announce';
 
 class Marker extends React.Component {
+
   render() {
     let classes = "marker";
     if (this.props.selected) {
@@ -8,7 +11,7 @@ class Marker extends React.Component {
     }
     return (
       <div className={classes}>
-        
+        <img src={this.props.picture.url}/>
       </div>
     );
   }
