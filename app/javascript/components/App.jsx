@@ -57,7 +57,7 @@ class App extends Component {
               return (
                 <Announce
                   key={announce.title}
-                  announce={announce}
+                  {...announce}
                   selectAnnounce={this.selectAnnounce}
                 />
               );

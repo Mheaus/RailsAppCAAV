@@ -1,7 +1,7 @@
 class AnnouncesController < ApplicationController
   def index
     @announces = Announce.all
-    
+
   end
 
   def new
@@ -15,5 +15,11 @@ class AnnouncesController < ApplicationController
   end
 
   def destroy
+  end
+
+  private
+
+  def announces_params
+    params.require(:announce).permit(:title, :description, :picture, :address, :latitude, :longitude)
   end
 end
