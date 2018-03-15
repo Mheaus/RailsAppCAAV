@@ -1,7 +1,12 @@
 // Place all the styles related to the announces controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.__root-react {
+  height: 100%;
+  width: 100%;
+}
 header#index-header {
+  position: sticky;
   background: white;
   display: flex;
   align-items: center;
@@ -54,11 +59,13 @@ section#__main-index {
     //   }
     display: flex;
     flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
     ._announce-item {
       display: flex;
       flex: 1;
       flex-direction: column;
-      width: 20rem;
+      min-width: 20rem;
       height: 16rem;
       margin: .25rem 1rem;
       box-shadow: .015em .06em .5em .13em rgba(120, 119, 119, 0.3);
@@ -116,20 +123,20 @@ section#__main-index {
       }
     }
   }
+
   ._map {
-    flex-grow: 1;
-    height: 10rem;
+    position: sticky;
+    width: 40%;
+    height: calc(100vh - 5.25rem);
+    opacity: 1;
   }
   .marker {
     border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
+    padding: .5rem 1rem;
     background-color: white;
-    width: 36px;
     text-align: center;
-    font-size: 15px;
-    .selected {
-      background-color: lightyellow;
+    &.selected {
+      background-color: lightblue;
       border-color: black;
       font-weight: bold;
     }

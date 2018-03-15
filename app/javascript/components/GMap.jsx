@@ -8,18 +8,30 @@ class GMap extends Component {
       lat: 44.9740103,
       lng: -0.7947671
     };
+    if (this.props.selectedAnnounce) {
+      center = {
+        lat: this.props.selectedAnnounce.latitude,
+        lng: this.props.selectedAnnounce.longitude
+      };
+    }
     return (
       <div className="_map">
         <GoogleMapReact
           bootstrapURLKeys={{ key: 'AIzaSyBeqtEur5dcqenuIuMjrfAoY2r39SqH_V4' }}
           center={center}
-          zoom={9}
+          zoom={11}
           >
-          <Marker
-            lat={44.852918}
-            lng={-0.572300}
-            text={'Home'}
-            />
+          {this.props.announces.map(announce => {
+            return (
+              <Marker
+                key={announce.title}
+                {...announce}
+                lat={announce.latitude}
+                lng={announce.longitude}
+                selected={announce === this.props.selectedAnnounce}
+              />
+            )
+          })}
         </GoogleMapReact>
       </div>
     );
