@@ -75,6 +75,8 @@ GEM
     eventmachine (1.2.5)
     execjs (2.7.0)
     ffi (1.9.23)
+    figaro (1.1.1)
+      thor (~> 0.14)
     formatador (0.2.5)
     geocoder (1.4.7)
     globalid (0.4.1)
@@ -166,10 +168,6 @@ GEM
       execjs
       railties (>= 3.2)
       tilt
-    react-rails-hot-loader (0.8.0)
-      em-websocket
-      rails
-      react-rails
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     sass (3.5.5)
@@ -231,6 +229,7 @@ DEPENDENCIES
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
+  figaro
   geocoder
   guard
   guard-livereload (~> 2.5)
@@ -240,7 +239,6 @@ DEPENDENCIES
   puma (~> 3.7)
   rails (~> 5.1.5)
   react-rails
-  react-rails-hot-loader
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
