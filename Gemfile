@@ -39,8 +39,11 @@ gem 'react-rails'
 # pckg for google maps : "google-map-react" with yarn
 gem 'geocoder'
 
-#security and keys
+# security and keys
 gem 'figaro'
+
+# image uploads and cloud
+gem 'cloudinary'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
