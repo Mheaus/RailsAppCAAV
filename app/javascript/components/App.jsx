@@ -69,10 +69,6 @@ class App extends Component {
               );
             })}
           </div>
-          <GMap
-            announces={this.state.announces}
-            selectedAnnounce={this.state.selectedAnnounce}
-          />
         </section>
       </div>
     );
