@@ -58,8 +58,21 @@ class App extends Component {
         </header>
         <section id="__main-index">
           <div className="__announces-index">
-            
+            {this.state.announces.map(announce => {
+              return (
+                <Announce
+                  key={announce.title}
+                  announce={announce}
+                  {...announce}
+                  selectAnnounce={this.selectAnnounce}
+                />
+              );
+            })}
           </div>
+          <GMap
+            announces={this.state.announces}
+            selectedAnnounce={this.state.selectedAnnounce}
+          />
         </section>
       </div>
     );
