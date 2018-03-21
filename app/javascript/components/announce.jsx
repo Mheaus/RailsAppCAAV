@@ -6,7 +6,7 @@ class Announce extends React.Component {
     const announceId = `announce-item${this.props.id}`
     const title = `${this.props.title}`
     const description = `${this.props.description}`
-    const imageUrl = `${this.props.picture.url.match(/(?:[^\/][\d\w\.]+)$/)}`
+    const imageUrl = `${this.props.picture.url.match(/(?:[^\/][\d\w\.]+\w{3,4})$/)}`
     const announcePath = `/announces/${this.props.id}`
     return (
       <div className="_announce-item" id={announceId} onClick={this.handleClick}>
