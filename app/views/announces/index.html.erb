@@ -1,2 +1,10 @@
 <%# react_component('App', { announces: @announces } ) %>
-<%= react_component('Test', {announce: @announces.first} ) %>
+<%= react_component('Announce', {
+    announce: @announces.first,
+    id: @announces.first.id,
+    title: @announces.first.title,
+    description: @announces.first.description,
+    picture: @announces.first.picture,
+    selectedAnnounce: @announces[1]
+  })
+%>
