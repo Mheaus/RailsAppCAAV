@@ -76,23 +76,55 @@ section#__main-index {
     //     ._announce-location {}
     //     ._announce-description {}
     //   }
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     height: 100%;
     width: 100%;
+    grid-gap: 1rem;
     padding: 1rem;
     justify-content: space-between;
     ._announce-item {
       display: flex;
       flex: 1;
       flex-direction: column;
-      max-width: 32.25%;
+      // max-width: 32.25%;
+      min-width: 25%;
       box-shadow: .015em .06em .5em .13em rgba(120, 119, 119, 0.3);
-      img {
-        width: 100%;
-
+      .__image-link {
+        position: relative;
+        height: 100%;
+        img {
+          width: 100%;
+        }
+        .__btn-container {
+          display: flex;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          align-items: center;
+          justify-content: center;
+          transition: all .5s;
+          background-color: rgba(0, 0, 0, 0.3);
+          ._btn-show-announce {
+            opacity: 0;
+            padding: .25rem 1.25rem;
+            background-color: white;
+            transition: all .5s;
+          }
+        }
+        &:hover {
+          .__btn-container {
+            opacity: 1;
+            ._btn-show-announce {
+              opacity: 1;
+            }
+          }
+        }
       }
       .__info-container {
+        margin-top: -.3rem;
         display: flex;
         height: 100%;
         flex-direction: column;
@@ -100,23 +132,27 @@ section#__main-index {
         position: relative;
         max-height: 9rem;
         width: 100%;
-        padding: 1rem;
+        padding: 1.25rem .75rem 1rem;
         border: .05rem solid rgba(151, 151, 151, .7);
         border-top: none;
         ._announce-title {}
         ._announce-location {
           position: absolute;
-          top: .3rem;
+          top: .25rem;
           right: .25rem;
           font-size: .75em;
           opacity: .75;
+          text-align: right;
+          text-transform: uppercase;
+          max-width: 5rem;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
         }
         ._announce-description {
-          margin-top: .25rem;
+          margin: .25rem 0 0 .13rem;
           opacity: .75;
           font-size: .75em;
-          text-overflow: ellipsis;
-          overflow: scroll;
         }
       }
     }
@@ -124,11 +160,16 @@ section#__main-index {
       ._announce-item {
         margin-top: 1rem;
         flex: 1;
-        ._announce-picture {
-          width: auto;
-          height: 1rem;
-          margin-right: -1px;
-          max-height: 9rem;
+        .__image-link {
+          ._announce-picture {
+            width: auto;
+            height: 1rem;
+            margin-right: -1px;
+            max-height: 9rem;
+          }
+          ._btn-show-announce {
+
+          }
         }
         .__info-container {
           padding: 1rem;
@@ -148,6 +189,7 @@ section#__main-index {
 
   ._map {
     position: sticky;
+    padding: 1rem;
     width: 40%;
     height: calc(100vh - 5.25rem);
     opacity: 1;
@@ -156,20 +198,26 @@ section#__main-index {
     }
   }
   .marker {
-    text-align: center;
     img {
-      margin: .25rem;
-      height: 2.5rem;
+      margin: -.5rem 0 0 .4rem;
+      height: 2rem;
       width: auto;
       max-width: 6rem;
       outline: .25rem solid white;
-      box-shadow: .015em .06em .5em .13em rgba(120, 119, 119, 0.3);
+      box-shadow: .15em .5em .5em .13em rgba(120, 119, 119, 0.5);
       transition: all 1s;
+    }
+    div {
+      background: linear-gradient(to bottom right, transparent 50%, white 50%);
+      box-shadow: .15rem .15rem .5em .013em rgba(120, 119, 119, 0.5);
+      width: 1rem;
+      height: 1rem;
+      transform: rotate(45deg);
+      margin: -.5rem 0 0 1.25rem;
     }
     &.selected {
       img {
-        outline: .25rem solid black;
-        box-shadow: .03em .1em .5em .13em rgba(120, 119, 119, 0.3);
+        box-shadow: 0 0 1.25em .75em rgba(48, 160, 215, 0.61);
       }
     }
   }

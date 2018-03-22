@@ -12,6 +12,7 @@ class Marker extends React.Component {
     return (
       <div className={classes}>
         <img src={this.props.picture.url}/>
+        <div></div>
       </div>
     );
   }

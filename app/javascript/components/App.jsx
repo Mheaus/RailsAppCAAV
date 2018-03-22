@@ -41,7 +41,7 @@ class App extends Component {
         <header id="index-header">
           <div className="__main-header">
             <a href="/">
-              <img src="/assets/favicon.ico" alt="logo link home" className="_logo"/>
+              <img src="https://raw.githubusercontent.com/Mheaus/RailsAppCAAV/master/app/assets/images/favicon.ico" alt="logo link home" className="_logo"/>
             </a>
             <div className="__search-input">
               <input type="search" className="_input" placeholder="« Essayez Bordeaux »" value={this.state.search}
