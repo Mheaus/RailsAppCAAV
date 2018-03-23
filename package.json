@@ -12,7 +12,5 @@
     "react-dom": "^16.2.0",
     "react_ujs": "^2.4.4"
   },
-  "devDependencies": {
-    "file-loader": "^1.1.11"
-  }
+  "devDependencies": {}
 }
