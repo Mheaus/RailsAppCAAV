@@ -5,6 +5,33 @@ import Announce from './announce';
 import GMap from './GMap';
 import Marker from './marker';
 
+function UserLogged(props) {
+  return (
+    <div className="__auth">
+      <a href="/users/show/" className="_dashboard">Votre Compte</a>
+      <a href="/users/sign_out" method="post" className="_disconnect">Déconnexion</a>
+    </div>
+  );
+}
+
+function GuestActions(props) {
+  return (
+    <div className="__auth">
+      <a href="/users/sign_up" className="_sign-in">Inscription</a>
+      <a href="/users/sign_in" className="_log-in">Connexion</a>
+    </div>
+  )
+}
+
+function Auth(props) {
+  const isLoggedIn = true;
+  if (isLoggedIn) {
+    return <UserLogged />;
+  } else {
+    return <GuestActions />;
+  }
+}
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -51,10 +78,7 @@ class App extends Component {
               </svg>
             </div>
           </div>
-          <div className="__authentication">
-            <a href="#" className="_sign-in">Inscription</a>
-            <a href="#" className="_log-in">Connexion</a>
-          </div>
+          <Auth />
         </header>
         <section id="__main-index">
           <div className="__announces-index">
@@ -68,6 +92,16 @@ class App extends Component {
                 />
               );
             })}
+            <a className="_announce-item" id="announce-item__add" href="/">
+              <div className="__image-link">
+                <img src="https://raw.githubusercontent.com/Mheaus/RailsAppCAAV/master/app/assets/images/favicon.ico" alt="logo" className="_logo"/>
+              </div>
+              <div className="__info-container">
+
+                <span className="_announce-title">Ajoutez votre annonce</span>
+                <p className="_announce-description"></p>
+              </div>
+            </a>
           </div>
           <GMap
             announces={this.state.announces}

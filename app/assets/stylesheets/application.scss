@@ -1,7 +1,12 @@
-
-
+// index for scss files
+// variables, animations and gloabal variables
 @import "globals";
 
+// style for home page
 @import "pages/home";
 
+// style for index page
 @import "announces/index";
+
+// style for shared
+@import "shared/flashes";

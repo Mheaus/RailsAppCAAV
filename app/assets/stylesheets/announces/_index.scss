@@ -50,7 +50,7 @@ header#index-header {
     }
   }
   }
-  .__authentication {
+  .__auth {
     display: flex;
     a {
       font-size: .9rem;
@@ -109,9 +109,12 @@ section#__main-index {
           background-color: rgba(0, 0, 0, 0.3);
           ._btn-show-announce {
             opacity: 0;
-            padding: .25rem 1.25rem;
-            background-color: white;
+            padding: .5rem 1.75rem;
+            background-color: #4e9cf0;
+            border-radius: .25rem;
+            box-shadow: .015em .06em .5em .13em rgba(215, 215, 215, 0.25);
             transition: all .5s;
+            color: white;
           }
         }
         &:hover {
@@ -155,31 +158,55 @@ section#__main-index {
           font-size: .75em;
         }
       }
-    }
-    &.-user-style-list {
-      ._announce-item {
-        margin-top: 1rem;
-        flex: 1;
+      &#announce-item__add {
         .__image-link {
-          ._announce-picture {
-            width: auto;
-            height: 1rem;
-            margin-right: -1px;
-            max-height: 9rem;
-          }
-          ._btn-show-announce {
-
+          height: 180%;
+          opacity: .5;
+          background-color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          ._logo {
+            width: 60%;
+            opacity: .75;
+            filter: grayscale(.9);
+            transition: all .75s;
           }
         }
         .__info-container {
-          padding: 1rem;
-          border: .13rem solid rgba(148, 148, 148, 0.25);
-          border-left: none;
-          min-height: 9rem;
-          max-height: 9rem;
+          border: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           ._announce-title {
-            font-size: 1.25rem;
+            color: #797979;
+            text-align: center;
+            border-bottom: 1px outset transparent;
+            transition: all .5s;
           }
+        }
+        &:hover {
+          .__image-link {
+            ._logo {
+              opacity: .9;
+            }
+          }
+          .__info-container {
+            ._announce-title {
+              border-bottom: 1px outset #ffffff;
+            }
+          }
+        }
+      }
+    }
+    &.-user-style-list {
+      ._announce-item {
+        .__image-link {
+          ._announce-picture {}
+          ._btn-show-announce {}
+        }
+        .__info-container {
+          ._announce-title {}
           ._announce-location {}
           ._announce-description {}
         }
