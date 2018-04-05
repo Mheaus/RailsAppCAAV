@@ -1,4 +1,39 @@
-<div class="frame" style="height: 200vh"></div>
+<nav class="__home-links">
+  <div class="__left">
+    <a href="#">Ajouter une Annonce</a>
+    <a href="#" class="-display-n-sm">Droits</a>
+    <a href="#" class="-display-n-sm">Partenaires</a>
+  </div>
+  <div class="__right">
+    <a href="#">Se Connecter</a>
+  </div>
+</nav>
+<header class="__home">
+  <%= inline_svg "logo.svg", class: "_background-logo" %>
+  <h1>Vous êtes au bon endroit pour <span>trouver</span> un commerce ambulant</h1>
+  <div class="__cta-button-search">
+    <span>Rechercher</span>
+    <%= inline_svg "ic_search.svg", class: "_ic-search" %>
+  </div>
+  <a class="_announces-all" href="/announces">Voir Toutes les Annonces ></a>
+  <% form_tag announces_path, method: :get, class: "__search-input" do %>
+    <input type="search" class="_input" placeholder="« Essayez Bordeaux »">
+    <%= link_to announces_path, class: "_button-search" do %>
+    <svg class="svg-inline--fa fa-search fa-w-16" aria-hidden="true" data-prefix="fa" data-icon="search" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>
+    <% end %>
+  <% end %>
+</header>
+<section class="__last-annonces">
+  <div class="__titles">
+    <h2 class="_title">Dernières<br>Annonces</h2>
+    <p class="_subtitle">Annonces les plus récentes autour de vous</p>
+  </div>
+</section>
+<footer>
+  
+</footer>
+
+<!-- <div class="frame" style="height: 200vh"></div>
 <header id="home-header">
   <%=image_tag("background-header-min.jpg", class: "_background-header", alt: "header background image")%>
   <nav class="menu">
@@ -221,7 +256,7 @@
       <div class="__header">
         <p class="_section-title">Nos Partenaires</p>
         <%= image_tag("ic_expand_more.svg") %>
-      </div>
+      </div> -->
       <!-- <p class="_name">
         mairies des villes de gironde
       </p>
@@ -231,13 +266,13 @@
       <p class="_name">
         Cabinet d'avocat bordelais en droit des affaires spécialisé
       </p> -->
-    </div>
+    <!-- </div>
   </div>
 </section>
 <a data-turbolinks="false" onclick="youScroll.to('#top').start()" class="button-to-top _framed -hidden">
   <%= image_tag("ic_expand_more.svg") %>
 </a>
-<a href="http://github.com/mheaus" class="signature">adbrtweb</a>
+<a href="http://github.com/mheaus" class="signature">adbrtweb</a> -->
 
 <%= content_for :after_js do %>
   <script type="text/javascript">
